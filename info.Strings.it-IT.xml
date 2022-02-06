@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<AppScanExtension>
+
+   <FullName>Pyscan</FullName>
+   <Description>Integra Python in AppScan</Description>
+
+</AppScanExtension>
