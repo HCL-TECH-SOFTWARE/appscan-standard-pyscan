@@ -34,3 +34,4 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+Properties/AssemblyInfo.cs
