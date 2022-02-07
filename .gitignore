@@ -1,7 +1,14 @@
 
 /PyScan.csproj.user
 /obj
+/StandAlone/obj/**
+/StandAlone/obj
+/.vs/**
+/.vs
 obj/**	
+PyScan.csproj.gpf
+PyScan.csproj.user
+
 properties/**	
 #Ignore thumbnails created by Windows
 Thumbs.db
