@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<AppScanExtension>
+   <!-- Front End MetaData -->
+   <FullName>Pyscan</FullName>
+   <Description>Integrate Python into AppScan (requires Python 3.8)</Description>
+   <Version>3.0</Version>
+   <Author>HCL Technologies Ltd.</Author>
+  <Copyright>© Copyright HCL Technologies Limited 2000, 2021. All rights reserved.</Copyright>   
+   <IconFile>Pyscan.png</IconFile>
+   <MainDllFile>PyscanExt.dll</MainDllFile>
+   <!-- Target Application this extension can install into, 
+       with minimum  supported version. -->
+   <TargetEdition>
+      <!-- supported values: AppScanAuditors, AppScanDev, AppScanQA, AppScanXM, All -->
+      <ID>All</ID>
+      <MinCompatibleVersion>7.5</MinCompatibleVersion>
+   </TargetEdition>
+</AppScanExtension>

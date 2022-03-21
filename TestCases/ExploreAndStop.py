@@ -2,6 +2,7 @@
 # runs explore and stops it after 10 seconds
 #
 
+# execfile("_defs.py")
 from _defs import *
 import threading
 import time

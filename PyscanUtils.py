@@ -118,7 +118,10 @@ def FuzzRequest(request, minValue, maxValue, matchPattern, host=None, port=None,
     """
 
     # If we don't have a host and port, read them from the starting URL
-    startingUri = System.Uri(appScan.Scan.ScanData.Config.StartingUrl)
+    try:
+        startingUri = System.Uri(appScan.Scan.ScanData.Config.StartingUrl)
+    except:
+        print("an Error occurred while trying to read startingUri.\nplease make sure you've configured a starting URL")
     if host is None:
         host = startingUri.Host
     if port is None:
@@ -152,7 +155,7 @@ def FuzzRequest(request, minValue, maxValue, matchPattern, host=None, port=None,
         # time.sleep(1)
 
         # If the given pattern was found in the response, save the test request as a found issue               
-        if result is True and Find(response, matchPattern[0]) and not Find(response, matchPattern[1]):
+        if result is True and Find(response, matchPattern):
             print(" - Pattern Matched - Saved as issue.\n\n")
 
             # Save the result as an issue                      
@@ -198,11 +201,9 @@ fromAccount=800003<fuzz here>&toAccount=800003&transferAmount=1234&transfer=Tran
 
 print("Pyscan Utils Loaded")
 
-# uncomment below lines to test functionality for visitedUrl in GetVisitedUrls(): print(
-# visitedUrl.Request.Uri.ToString()) SearchForPattern("\w", "AltoroAccounts")
+# uncomment below lines to test functionality
+# for visitedUrl in GetVisitedUrls():
+# 	print(visitedUrl.Request.Uri.ToString())
+# SearchForPattern("\w", "AltoroAccounts")
 
-# matchPattern is divide into two parts:
-# the first value(matchPattern[0]) is a regex string that we want to find out in our response, e.g: "200 OK" and the
-# second value(matchPattern[1]) is a regex that we want to avoid in our response, e.g: "Error" so if we'll find this
-# regex in the response, we'll drop the that response from the new vulnerabilities list
-FuzzRequest(fuzzDemoReq, 95, 105, matchPattern=["HTTP....\s200", "Error"])
+FuzzRequest(fuzzDemoReq, 95, 105, matchPattern="HTTP....\s200")

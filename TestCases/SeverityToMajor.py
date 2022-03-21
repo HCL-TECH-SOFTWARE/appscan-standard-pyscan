@@ -2,6 +2,7 @@
 # changes all detected issue-type severities to major
 #
 
+# execfile("_defs.py")
 from _defs import *
 
 SeverityHigh = 3

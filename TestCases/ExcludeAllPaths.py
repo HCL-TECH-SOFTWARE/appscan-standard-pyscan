@@ -7,6 +7,8 @@ def ExcludeNode(node):
     for n in node.Children:
         ExcludeNode(n)
 
+
+# execfile("_defs.py")
 from _defs import *
 
 scan.Scan(1, 0)

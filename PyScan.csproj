@@ -38,7 +38,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\dist\Debug\bin\Extensions\PyScan\</OutputPath>
+    <OutputPath>output\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -64,9 +64,12 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AppScanSDK">
+      <HintPath>..\..\..\..\Program Files (x86)\HCL\AppScan Standard\AppScanSDK.dll</HintPath>
+    </Reference>
     <Reference Include="AppScanVersionInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\dist\$(ConfigurationName)\bin\AppScanVersionInfo.dll</HintPath>
+      <HintPath>..\Program Files (x86)\HCL\AppScan Standard\Tools\Authentication Tester\AppScanVersionInfo.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Python.Runtime, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -79,138 +82,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Strings.es-ES.Designer.cs">
-      <DependentUpon>Strings.es-ES.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Strings.pt-BR.Designer.cs">
-      <DependentUpon>Strings.pt-BR.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="PyScan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
     <Compile Include="Strings.cs" />
+    <Compile Include="Strings\Strings.Designer.cs" />
+    <Compile Include="Strings\Strings.es-ES.Designer.cs" />
+    <Compile Include="Strings\Strings.pt-BR.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppScan.ico" />
-    <Content Include="info.Strings.da.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.de-DE.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.en-US.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.es-ES.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.fr-FR.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.it-IT.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.ja-JP.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.ko-KR.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.pt-BR.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.ru-RU.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.zh-CHS.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.zh-CHT.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="info.Strings.zu-ZA.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="info.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="PyscanUtils.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Strings.es-ES.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.es-ES.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.pt-BR.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.pt-BR.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.zh-CHS.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.ru-RU.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.zh-CHT.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.fr-FR.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.it-IT.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.de-DE.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.da.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.zu-ZA.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <Content Include="Strings\info.Strings.da.xml" />
+    <Content Include="Strings\info.Strings.de-DE.xml" />
+    <Content Include="Strings\info.Strings.en-US.xml" />
+    <Content Include="Strings\info.Strings.es-ES.xml" />
+    <Content Include="Strings\info.Strings.fr-FR.xml" />
+    <Content Include="Strings\info.Strings.it-IT.xml" />
+    <Content Include="Strings\info.Strings.ja-JP.xml" />
+    <Content Include="Strings\info.Strings.ko-KR.xml" />
+    <Content Include="Strings\info.Strings.pt-BR.xml" />
+    <Content Include="Strings\info.Strings.ru-RU.xml" />
+    <Content Include="Strings\info.Strings.zh-CHS.xml" />
+    <Content Include="Strings\info.Strings.zh-CHT.xml" />
+    <Content Include="Strings\info.Strings.zu-ZA.xml" />
     <EmbeddedResource Include="OpenConsole.py" />
-    <EmbeddedResource Include="Strings.ja-JP.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.ko-KR.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Strings.resx">
-      <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <Content Include="PyScan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\ASStdCommonUtils\DBAdapter\DBAdapter.csproj">
-      <Project>{2A509F13-D3AF-4201-9D05-D57DCF104888}</Project>
-      <Name>DBAdapter</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\ASStdCommonUtils\Utilities\Utilities.csproj">
-      <Project>{4481AF11-370B-413E-8750-5E99C822DFA1}</Project>
-      <Name>Utilities</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\ASStdSDK\SDK\AppScanSDK.csproj">
-      <Project>{8C2308C8-7AAF-43DD-AF9E-4CB071DC8EFB}</Project>
-      <Name>AppScanSDK</Name>
-      <Private>False</Private>
-    </ProjectReference>
+    <EmbeddedResource Include="Strings\Strings.da.resx" />
+    <EmbeddedResource Include="Strings\Strings.de-DE.resx" />
+    <EmbeddedResource Include="Strings\Strings.es-ES.resx" />
+    <EmbeddedResource Include="Strings\Strings.fr-FR.resx" />
+    <EmbeddedResource Include="Strings\Strings.it-IT.resx" />
+    <EmbeddedResource Include="Strings\Strings.ja-JP.resx" />
+    <EmbeddedResource Include="Strings\Strings.ko-KR.resx" />
+    <EmbeddedResource Include="Strings\Strings.pt-BR.resx" />
+    <EmbeddedResource Include="Strings\Strings.resx" />
+    <EmbeddedResource Include="Strings\Strings.ru-RU.resx" />
+    <EmbeddedResource Include="Strings\Strings.zh-CHS.resx" />
+    <EmbeddedResource Include="Strings\Strings.zh-CHT.resx" />
+    <EmbeddedResource Include="Strings\Strings.zu-ZA.resx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

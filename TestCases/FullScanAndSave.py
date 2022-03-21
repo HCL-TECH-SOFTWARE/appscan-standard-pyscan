@@ -4,6 +4,7 @@
 
 filename = "_temp.scan"
 
+# execfile("FullScan.py")
 from FullScan import *
 
 scan.SaveScanData(filename)

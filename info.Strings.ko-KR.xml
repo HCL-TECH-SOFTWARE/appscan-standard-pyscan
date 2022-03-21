@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
-<AppScanExtension>
-
-   <FullName>Pyscan</FullName>
-   <Description>Python을 AppScan에 통합합니다.</Description>
-
-</AppScanExtension>
