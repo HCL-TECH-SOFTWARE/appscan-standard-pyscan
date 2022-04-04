@@ -42,3 +42,4 @@ _ReSharper*/
 #Nuget packages folder
 packages/
 Properties/AssemblyInfo.cs
+/output
