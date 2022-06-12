@@ -64,13 +64,12 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppScanSDK">
-      <HintPath>..\..\..\..\Program Files (x86)\HCL\AppScan Standard\AppScanSDK.dll</HintPath>
-    </Reference>
-    <Reference Include="AppScanVersionInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="AppScanSDK, Version=10.0.8.30897, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Program Files (x86)\HCL\AppScan Standard\Tools\Authentication Tester\AppScanVersionInfo.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\Users\aviad.naamat\AppData\Roaming\HCL\AppScan Standard\Extensions\AppScanSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="AppScanVersionInfo">
+      <HintPath>..\Users\aviad.naamat\AppData\Roaming\HCL\TrafficViewer\AppScanVersionInfo.dll</HintPath>
     </Reference>
     <Reference Include="Python.Runtime, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
