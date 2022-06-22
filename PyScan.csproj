@@ -49,7 +49,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\dist\Release\bin\Extensions\PyScan\</OutputPath>
+    <OutputPath>output\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -64,12 +64,11 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppScanSDK, Version=10.0.8.30897, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Users\aviad.naamat\AppData\Roaming\HCL\AppScan Standard\Extensions\AppScanSDK.dll</HintPath>
+    <Reference Include="AppScanSDK">
+      <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\AppScanSDK.dll</HintPath>
     </Reference>
     <Reference Include="AppScanVersionInfo">
-      <HintPath>..\Users\aviad.naamat\AppData\Roaming\HCL\TrafficViewer\AppScanVersionInfo.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\Tools\Traffic Viewer\AppScanVersionInfo.dll</HintPath>
     </Reference>
     <Reference Include="Python.Runtime, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -84,9 +83,6 @@
     <Compile Include="PyScan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings.cs" />
-    <Compile Include="Strings\Strings.Designer.cs" />
-    <Compile Include="Strings\Strings.es-ES.Designer.cs" />
-    <Compile Include="Strings\Strings.pt-BR.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppScan.ico" />
@@ -96,36 +92,10 @@
     <Content Include="PyscanUtils.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Strings\info.Strings.da.xml" />
-    <Content Include="Strings\info.Strings.de-DE.xml" />
-    <Content Include="Strings\info.Strings.en-US.xml" />
-    <Content Include="Strings\info.Strings.es-ES.xml" />
-    <Content Include="Strings\info.Strings.fr-FR.xml" />
-    <Content Include="Strings\info.Strings.it-IT.xml" />
-    <Content Include="Strings\info.Strings.ja-JP.xml" />
-    <Content Include="Strings\info.Strings.ko-KR.xml" />
-    <Content Include="Strings\info.Strings.pt-BR.xml" />
-    <Content Include="Strings\info.Strings.ru-RU.xml" />
-    <Content Include="Strings\info.Strings.zh-CHS.xml" />
-    <Content Include="Strings\info.Strings.zh-CHT.xml" />
-    <Content Include="Strings\info.Strings.zu-ZA.xml" />
     <EmbeddedResource Include="OpenConsole.py" />
     <Content Include="PyScan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Strings\Strings.da.resx" />
-    <EmbeddedResource Include="Strings\Strings.de-DE.resx" />
-    <EmbeddedResource Include="Strings\Strings.es-ES.resx" />
-    <EmbeddedResource Include="Strings\Strings.fr-FR.resx" />
-    <EmbeddedResource Include="Strings\Strings.it-IT.resx" />
-    <EmbeddedResource Include="Strings\Strings.ja-JP.resx" />
-    <EmbeddedResource Include="Strings\Strings.ko-KR.resx" />
-    <EmbeddedResource Include="Strings\Strings.pt-BR.resx" />
-    <EmbeddedResource Include="Strings\Strings.resx" />
-    <EmbeddedResource Include="Strings\Strings.ru-RU.resx" />
-    <EmbeddedResource Include="Strings\Strings.zh-CHS.resx" />
-    <EmbeddedResource Include="Strings\Strings.zh-CHT.resx" />
-    <EmbeddedResource Include="Strings\Strings.zu-ZA.resx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
