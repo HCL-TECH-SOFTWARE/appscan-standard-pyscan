@@ -20,7 +20,7 @@ namespace PyScan
 
         private TStrings()
         {
-            localResourceManager = new ResourceManager("PyScan.Strings",
+            localResourceManager = new ResourceManager("PyScan.Resources.Strings",
                Assembly.GetExecutingAssembly());
         }
 

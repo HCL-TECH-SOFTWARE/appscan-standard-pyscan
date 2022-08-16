@@ -47,13 +47,15 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
     <OutputPath>output\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Dummy|AnyCPU' ">
     <OutputPath>bin\Dummy\</OutputPath>
@@ -82,6 +84,9 @@
   <ItemGroup>
     <Compile Include="PyScan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Strings.Designer.cs" />
+    <Compile Include="Resources\Strings.es-ES.Designer.cs" />
+    <Compile Include="Resources\Strings.pt-BR.Designer.cs" />
     <Compile Include="Strings.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,10 +97,36 @@
     <Content Include="PyscanUtils.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\info.Strings.da.xml" />
+    <Content Include="Resources\info.Strings.de-DE.xml" />
+    <Content Include="Resources\info.Strings.en-US.xml" />
+    <Content Include="Resources\info.Strings.es-ES.xml" />
+    <Content Include="Resources\info.Strings.fr-FR.xml" />
+    <Content Include="Resources\info.Strings.it-IT.xml" />
+    <Content Include="Resources\info.Strings.ja-JP.xml" />
+    <Content Include="Resources\info.Strings.ko-KR.xml" />
+    <Content Include="Resources\info.Strings.pt-BR.xml" />
+    <Content Include="Resources\info.Strings.ru-RU.xml" />
+    <Content Include="Resources\info.Strings.zh-CHS.xml" />
+    <Content Include="Resources\info.Strings.zh-CHT.xml" />
+    <Content Include="Resources\info.Strings.zu-ZA.xml" />
     <EmbeddedResource Include="OpenConsole.py" />
     <Content Include="PyScan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Resources\Strings.da.resx" />
+    <EmbeddedResource Include="Resources\Strings.de-DE.resx" />
+    <EmbeddedResource Include="Resources\Strings.es-ES.resx" />
+    <EmbeddedResource Include="Resources\Strings.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\Strings.it-IT.resx" />
+    <EmbeddedResource Include="Resources\Strings.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Strings.ko-KR.resx" />
+    <EmbeddedResource Include="Resources\Strings.pt-BR.resx" />
+    <EmbeddedResource Include="Resources\Strings.resx" />
+    <EmbeddedResource Include="Resources\Strings.ru-RU.resx" />
+    <EmbeddedResource Include="Resources\Strings.zh-CHS.resx" />
+    <EmbeddedResource Include="Resources\Strings.zh-CHT.resx" />
+    <EmbeddedResource Include="Resources\Strings.zu-ZA.resx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -117,6 +148,7 @@
   <ItemGroup>
     <None Include="clr.pyd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -148,50 +180,47 @@ copy "$(TargetDir)\PyScan.png" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\PyScanExt.dll" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\PyscanUtils.py" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\Python.Runtime.dll" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\clr.pyd" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\info.xml" "$(TargetDir)\$(TargetName)\"
 
 
-copy "$(TargetDir)\info.Strings.es-ES.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.es-ES.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\es-ES\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\es-ES\"
 
-copy "$(TargetDir)\info.Strings.pt-BR.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.pt-BR.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\pt-BR\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\pt-BR\"
 
-copy "$(TargetDir)\info.Strings.it-IT.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.it-IT.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\it-IT\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\it-IT\"
 
-copy "$(TargetDir)\info.Strings.de-DE.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.de-DE.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\de-DE\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\de-DE\"
 
-copy "$(TargetDir)\info.Strings.fr-FR.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.fr-FR.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\fr-FR\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\fr-FR\"
 
-copy "$(TargetDir)\info.Strings.ko-KR.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.ko-KR.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\ko-KR\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\ko-KR\"
 
-copy "$(TargetDir)\info.Strings.ja-JP.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.ja-JP.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\ja-JP\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\ja-JP\"
 
-copy "$(TargetDir)\info.Strings.ru-RU.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.ru-RU.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\ru-RU\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\ru-RU\"
 
-copy "$(TargetDir)\info.Strings.zh-CHT.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.zh-CHT.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\zh-CHT\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zh-CHT\"
 
-copy "$(TargetDir)\info.Strings.zh-CHS.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.zh-CHS.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\zh-CHS\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zh-CHS\"
 
-copy "$(TargetDir)\info.Strings.da.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.da.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\da\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\da\"
 
-copy "$(TargetDir)\info.Strings.zu-ZA.xml" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\Resources\info.Strings.zu-ZA.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\da\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zu-ZA\"
 
-
-$(SolutionDir)Extensions\ExtensionSigner\bin\$(ConfigurationName)\ExtensionSigner.exe -s $(TargetDir)\$(TargetName)
+$(TargetDir)\Resources\ExtensionSigner.exe -s $(TargetDir)\$(TargetName)
 copy "$(TargetDir)\$(TargetName)\info.xml" "$(TargetDir)\"
-
 del "$(TargetDir)\$(TargetName).zip"
 
  echo "Note: to build this project, you need to have 7-zip installed (http://www.7-zip.org/)"
