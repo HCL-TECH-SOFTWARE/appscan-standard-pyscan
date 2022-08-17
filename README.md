@@ -1,21 +1,33 @@
-Download Pyscan
+Pyscan on GitHub:
 
 https://github.com/HCL-TECH-SOFTWARE/appscan-standard-pyscan
 
+You can download a ZIP file containing the latest PyScan extension release or compile your own.
+
+Prerequisite:
+- You must have Python 3.8 or later installed on the machine that will run the extension.
+
 ==========================================================
 
-Compile your PyScan extension
+A) Download PyScan extension
 
-Prerequisites:
+The latest version can be found on the GitHub page, in the Releases section.
 
-You must have AppScan installed on your local machine.
+1) Click on PyScanExt.zip to download the extension.
+2) Add the extension to AppScan as described in section C below.
 
-If it’s installed in the default folder:
+==========================================================
+
+B) Compile your PyScan extension
+
+Prerequisite: You must be able to compile a C# Project.
+
+If AppScan Standard is installed in the default folder:
 "C:\Program Files (x86)\HCL\AppScan Standard\"
 you can skip Step 1.
 
 1) Attach DLLs from AppScan install folder:
-	a) Open “PyScan.sln” with Visual Studio.
+	a) Open “PyScan.sln” with Visual Studio or other IDE of your choice.
 	b) Locate and right-click on PyScan project.
 	c) Click Add > Reference
 	d) In the Browse section, select Browse and add the following 2 DLLs from the AppScan folder:
@@ -28,7 +40,7 @@ you can skip Step 1.
 
 ===========================================================
 
-Add the PyScan extension to AppScan:
+C) Add the PyScan extension to AppScan:
 
 1) In AppScan, go to Tools > Extensions > Extension manager.
 2) Click “Add extension from:” button, and select the “PyScanExt.zip” file you created previously.
@@ -36,9 +48,9 @@ Add the PyScan extension to AppScan:
 
 ===========================================================
 
-Use PyScan in Appscan:
+D) Use PyScan in Appscan:
 
-1) For best results using the extension it is recommended to configure a Starting URL.
+1) For best results using the extension it is recommended to configure a Starting URL (in Scan Configuration).
 2) Click Tools > Extension > Start Pyscan.
 3) From the console that opens do one of the following:
 	- Open your Python file or module, and click Run > Run module.
@@ -48,5 +60,5 @@ Example
 These steps will modify a fuzz word in the demo site requests, which will be printed to the console.
 1) In Appscan, open the demo.testfire.com .scan file.
 2) Click Tools > Extension > Start Pyscan.
-3) From the console menu click File > Open, then locate and select “PyscanUtils.py” file; then click Run > Run Module.
+3) From the console menu click File > Open, then locate and select “PyscanFuzzerUtil.py” file; then click Run > Run Module.
 	
