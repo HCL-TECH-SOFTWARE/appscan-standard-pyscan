@@ -94,9 +94,6 @@
     <Content Include="info.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="PyscanUtils.py">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\info.Strings.da.xml" />
     <Content Include="Resources\info.Strings.de-DE.xml" />
     <Content Include="Resources\info.Strings.en-US.xml" />
