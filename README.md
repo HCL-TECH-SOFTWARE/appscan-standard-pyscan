@@ -32,7 +32,7 @@ you can skip Step 1.
 	c) Click Add > Reference
 	d) In the Browse section, select Browse and add the following 2 DLLs from the AppScan folder:
 		o	AppScanSDK.dll
-		o	AppScanVersionInfo.dll
+		o	AppScanVersionInfo.dll (Can be found at \Tools\Authentication Tester)
 
 2) Under project properties you can optionally define the build output location. By default it is the working folder.
 
