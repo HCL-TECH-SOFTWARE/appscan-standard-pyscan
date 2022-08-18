@@ -1,4 +1,4 @@
-Pyscan on GitHub:
+Pyscan GitHub repository:
 
 https://github.com/HCL-TECH-SOFTWARE/appscan-standard-pyscan
 
@@ -11,7 +11,7 @@ Prerequisite:
 
 A) Download PyScan extension
 
-The latest version can be found on the GitHub page, in the Releases section.
+The latest version can be found in the GitHub repository, in the Releases section.
 
 1) Click on PyScanExt.zip to download the extension.
 2) Add the extension to AppScan as described in section C below.
@@ -22,9 +22,8 @@ B) Compile your PyScan extension
 
 Prerequisite: You must be able to compile a C# Project.
 
-If AppScan Standard is installed in the default folder:
+Skip Step 1 if AppScan Standard is installed in the default folder:
 "C:\Program Files (x86)\HCL\AppScan Standard\"
-you can skip Step 1.
 
 1) Attach DLLs from AppScan install folder:
 	a) Open “PyScan.sln” with Visual Studio or other IDE of your choice.
@@ -43,14 +42,15 @@ you can skip Step 1.
 C) Add the PyScan extension to AppScan:
 
 1) In AppScan, go to Tools > Extensions > Extension manager.
-2) Click “Add extension from:” button, and select the “PyScanExt.zip” file you created previously.
+2) Click “Add extension from:” button, and select the “PyScanExt.zip” file you created previously or downloaded.
 3) Restart AppScan for the change to take effect.
 
 ===========================================================
 
-D) Use PyScan in Appscan:
+D) Use PyScan in AppScan:
 
-1) For best results using the extension it is recommended to configure a Starting URL (in Scan Configuration).
+1) If your scripts need a Starting URL and this is not configured in the scan on which you are running the script,
+   you must configure it in Scan Configuration > URLs and servers.
 2) Click Tools > Extension > Start Pyscan.
 3) From the console that opens do one of the following:
 	- Open your Python file or module, and click Run > Run module.
