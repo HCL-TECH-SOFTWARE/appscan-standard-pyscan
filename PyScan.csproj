@@ -94,6 +94,9 @@
     <Content Include="info.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="PyscanFuzzerUtil.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\info.Strings.da.xml" />
     <Content Include="Resources\info.Strings.de-DE.xml" />
     <Content Include="Resources\info.Strings.en-US.xml" />
@@ -172,10 +175,10 @@ md "$(TargetDir)\$(TargetName)\zh-CHS"
 md "$(TargetDir)\$(TargetName)\da"
 md "$(TargetDir)\$(TargetName)\zu-ZA"
 
-
+copy "$(TargetDir)\PyscanFuzzerUtil.py" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\PyScan.png" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\PyScanExt.dll" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\PyscanFuzzerUtil.py" "$(TargetDir)\$(TargetName)\"
+
 copy "$(TargetDir)\Python.Runtime.dll" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\info.xml" "$(TargetDir)\$(TargetName)\"
 
