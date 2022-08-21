@@ -175,7 +175,7 @@ md "$(TargetDir)\$(TargetName)\zu-ZA"
 
 copy "$(TargetDir)\PyScan.png" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\PyScanExt.dll" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\PyscanUtils.py" "$(TargetDir)\$(TargetName)\"
+copy "$(TargetDir)\PyscanFuzzerUtil.py" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\Python.Runtime.dll" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\info.xml" "$(TargetDir)\$(TargetName)\"
 
