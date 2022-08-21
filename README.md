@@ -61,5 +61,5 @@ Example
 These steps will modify a fuzz word in the demo site requests, which will be printed to the console.
 1) In Appscan, open the demo.testfire.com .scan file.
 2) Click Tools > Extension > Start Pyscan.
-3) From the console menu click File > Open, then locate and select “PyscanFuzzerUtil.py” file; then click Run > Run Module.
+3) From the console menu click File > Open, then locate and select “PyscanFuzzerUtil.py”(in the ZIP file you downloaded), then click Run > Run Module.
 	
