@@ -72,6 +72,10 @@
     <Reference Include="AppScanVersionInfo">
       <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\Tools\Traffic Viewer\AppScanVersionInfo.dll</HintPath>
     </Reference>
+    <Reference Include="Debug, Version=10.0.8.28196, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\Debug.dll</HintPath>
+    </Reference>
     <Reference Include="Python.Runtime, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Python.Runtime.dll</HintPath>
@@ -80,6 +84,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Utilities, Version=10.0.8.28196, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PyScan.cs" />

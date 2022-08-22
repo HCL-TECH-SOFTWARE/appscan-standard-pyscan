@@ -8,9 +8,13 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Threading;
+using System.Windows.Forms;
 using Python.Runtime;
 using AppScan;
 using AppScan.Extensions;
+using ThreadState = System.Threading.ThreadState;
+using TraceLevel = System.Diagnostics.TraceLevel;
+using AppScan.Diagnostics;
 
 namespace PyScan
 {
@@ -70,7 +74,9 @@ namespace PyScan
             {
                 if (cDllErrorMessage == String.Empty)
                     cDllErrorMessage = TStrings.Instance.GetString("PyScan.dllErrorMessage");
-                throw new DllNotFoundException(cDllErrorMessage, e);
+                Debug.Logger.Log(TraceLevel.Error, e.ToString());
+                MessageBox.Show(cDllErrorMessage, "PyScan extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             // init PyScan:
