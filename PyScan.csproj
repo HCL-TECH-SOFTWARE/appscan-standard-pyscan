@@ -92,9 +92,15 @@
   <ItemGroup>
     <Compile Include="PyScan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Strings.Designer.cs" />
-    <Compile Include="Resources\Strings.es-ES.Designer.cs" />
-    <Compile Include="Resources\Strings.pt-BR.Designer.cs" />
+    <Compile Include="Resources\Strings.Designer.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Resources\Strings.es-ES.Designer.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Resources\Strings.pt-BR.Designer.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Strings.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,36 +111,92 @@
     <Content Include="PyscanFuzzerUtil.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\info.Strings.da.xml" />
-    <Content Include="Resources\info.Strings.de-DE.xml" />
-    <Content Include="Resources\info.Strings.en-US.xml" />
-    <Content Include="Resources\info.Strings.es-ES.xml" />
-    <Content Include="Resources\info.Strings.fr-FR.xml" />
-    <Content Include="Resources\info.Strings.it-IT.xml" />
-    <Content Include="Resources\info.Strings.ja-JP.xml" />
-    <Content Include="Resources\info.Strings.ko-KR.xml" />
-    <Content Include="Resources\info.Strings.pt-BR.xml" />
-    <Content Include="Resources\info.Strings.ru-RU.xml" />
-    <Content Include="Resources\info.Strings.zh-CHS.xml" />
-    <Content Include="Resources\info.Strings.zh-CHT.xml" />
-    <Content Include="Resources\info.Strings.zu-ZA.xml" />
+    <Content Include="ExtensionSigner.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.da.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.de-DE.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.en-US.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.es-ES.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.fr-FR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.it-IT.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.ja-JP.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.ko-KR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.pt-BR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.ru-RU.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.zh-CHS.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.zh-CHT.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.Strings.zu-ZA.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Microsoft.Win32.Registry.dll" />
     <EmbeddedResource Include="OpenConsole.py" />
     <Content Include="PyScan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Resources\Strings.da.resx" />
-    <EmbeddedResource Include="Resources\Strings.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Strings.es-ES.resx" />
-    <EmbeddedResource Include="Resources\Strings.fr-FR.resx" />
-    <EmbeddedResource Include="Resources\Strings.it-IT.resx" />
-    <EmbeddedResource Include="Resources\Strings.ja-JP.resx" />
-    <EmbeddedResource Include="Resources\Strings.ko-KR.resx" />
-    <EmbeddedResource Include="Resources\Strings.pt-BR.resx" />
-    <EmbeddedResource Include="Resources\Strings.resx" />
-    <EmbeddedResource Include="Resources\Strings.ru-RU.resx" />
-    <EmbeddedResource Include="Resources\Strings.zh-CHS.resx" />
-    <EmbeddedResource Include="Resources\Strings.zh-CHT.resx" />
-    <EmbeddedResource Include="Resources\Strings.zu-ZA.resx" />
+    <EmbeddedResource Include="Resources\Strings.da.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.de-DE.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.es-ES.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.fr-FR.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.it-IT.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.ja-JP.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.ko-KR.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.pt-BR.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.ru-RU.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zh-CHS.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zh-CHT.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zu-ZA.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -227,7 +289,7 @@ copy "$(TargetDir)\da\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\d
 copy "$(TargetDir)\Resources\info.Strings.zu-ZA.xml" "$(TargetDir)\$(TargetName)\"
 copy "$(TargetDir)\da\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zu-ZA\"
 
-$(TargetDir)\Resources\ExtensionSigner.exe -s $(TargetDir)\$(TargetName)
+$(TargetDir)\ExtensionSigner.exe -s $(TargetDir)\$(TargetName)
 copy "$(TargetDir)\$(TargetName)\info.xml" "$(TargetDir)\"
 del "$(TargetDir)\$(TargetName).zip"
 
@@ -235,8 +297,8 @@ del "$(TargetDir)\$(TargetName).zip"
 "C:\Program Files\7-Zip\7z.exe" a -tzip "$(TargetDir)$(TargetName).zip" -r "$(TargetDir)\$(TargetName)"
 
 
-rem rmdir /S /Q  "C:\Documents and Settings\All Users\Application Data\IBM\AppScan Standard\Extensions\$(TargetName)"
-rem md "C:\Documents and Settings\All Users\Application Data\IBM\AppScan Standard\Extensions\$(TargetName)"
-rem xcopy "$(TargetDir)\$(TargetName)" "C:\Documents and Settings\All Users\Application Data\IBM\AppScan Standard\Extensions\$(TargetName)" /D /S /E /Y</PostBuildEvent>
+rem rmdir /S /Q  "C:\Documents and Settings\All Users\Application Data\AppScan Standard\Extensions\$(TargetName)"
+rem md "C:\Documents and Settings\All Users\Application Data\AppScan Standard\Extensions\$(TargetName)"
+rem xcopy "$(TargetDir)\$(TargetName)" "C:\Documents and Settings\All Users\Application Data\AppScan Standard\Extensions\$(TargetName)" /D /S /E /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

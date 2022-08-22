@@ -21,7 +21,10 @@ The latest version can be found in the GitHub repository, in the Releases sectio
 
 B) Compile your PyScan extension
 
-Prerequisite: You must be able to compile a C# Project.
+Prerequisites:
+- You must be able to compile a C# Project.
+- You must have 7-zip installed (http://www.7-zip.org/).
+
 
 Skip Step 1 if AppScan Standard is installed in the default folder:
 "C:\Program Files (x86)\HCL\AppScan Standard\"
