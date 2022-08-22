@@ -7,7 +7,7 @@ You can download a ZIP file containing the latest PyScan extension release or co
 Prerequisite:
 - You must have Python 3.8 or later installed on the machine that will run the extension, and Python must be added to the Windows path. 
   (To add it: On your machine, in the system Environment Variables > User variables > Path, add a path to your Python installation directory.)
-
+   You'll need to restart your machine after the installation.
 ==========================================================
 
 A) Download PyScan extension
@@ -30,8 +30,10 @@ Skip Step 1 if AppScan Standard is installed in the default folder:
 	a) Open “PyScan.sln” with Visual Studio or other IDE of your choice.
 	b) Locate and right-click on PyScan project.
 	c) Click Add > Reference
-	d) In the Browse section, select Browse and add the following 2 DLLs from the AppScan folder:
+	d) In the Browse section, select Browse and add the following 4 DLLs from the AppScan folder:
 		o	AppScanSDK.dll
+		o	debug.dll
+		o	utilities.dll
 		o	AppScanVersionInfo.dll (Can be found at \Tools\Authentication Tester)
 
 2) Under project properties you can optionally define the build output location. By default it is the working folder.
@@ -57,9 +59,16 @@ D) Use PyScan in AppScan:
 	- Open your Python file or module, and click Run > Run module.
 	- Write Python code in the console and run it.
 
+
 Example
 These steps will modify a fuzz word in the demo site requests, which will be printed to the console.
 1) In Appscan, open the demo.testfire.com .scan file.
 2) Click Tools > Extension > Start Pyscan.
 3) From the console menu click File > Open, then locate and select “PyscanFuzzerUtil.py”(in the ZIP file you downloaded), then click Run > Run Module.
+
+===========================================================
 	
+E) Referencing AppScan methods
+
+You can call AppScan SDK methods from your Python script. The SDK documentation is located in your AppScan Docs folder, which by default is:
+"C:\Program Files (x86)\HCL\AppScan Standard\Docs\AppScanSDK.chm"

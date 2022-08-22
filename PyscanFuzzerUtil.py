@@ -3,6 +3,8 @@
 import re
 # import time
 import __main__
+import sys
+
 from DBAdapter import ObjectID
 from CLR import SecurityData
 import random
@@ -121,7 +123,7 @@ def FuzzRequest(request, minValue, maxValue, matchPattern, host=None, port=None,
     try:
         startingUri = System.Uri(appScan.Scan.ScanData.Config.StartingUrl)
     except:
-        print("an Error occurred while trying to read startingUri.\nplease make sure you've configured a starting URL")
+        print("an Error occurred while trying to read startingUri.\nplease make sure you've configured a starting URL.")
     if host is None:
         host = startingUri.Host
     if port is None:
@@ -139,7 +141,7 @@ def FuzzRequest(request, minValue, maxValue, matchPattern, host=None, port=None,
     for i in range(minValue, maxValue):
 
         # Print the numbers for visual progress indication
-        print(str(i)+":")
+        print(str(i) + ":")
 
         # Replace the placeholder with the current value in the range
         fuzzedRequest = request.replace(placeHolder, str(i))
@@ -205,5 +207,7 @@ print("Pyscan Utils Loaded")
 # for visitedUrl in GetVisitedUrls():
 # 	print(visitedUrl.Request.Uri.ToString())
 # SearchForPattern("\w", "AltoroAccounts")
-
-FuzzRequest(fuzzDemoReq, 95, 105, matchPattern="HTTP....\s200")
+try:
+    FuzzRequest(fuzzDemoReq, 95, 105, matchPattern="HTTP....\s200")
+except Exception as e:
+    print(e)
