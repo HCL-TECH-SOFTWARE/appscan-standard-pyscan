@@ -111,9 +111,6 @@
     <Content Include="PyscanFuzzerUtil.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ExtensionSigner.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\info.Strings.da.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
