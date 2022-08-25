@@ -130,10 +130,11 @@ def FuzzRequest(request, minValue, maxValue, matchPattern, host=None, port=None,
         port = startingUri.Port
 
     # Get the root node
-    path = ""
-    for visitedUrl in GetVisitedUrls():
-        path = visitedUrl.Request.DecodedUri
-        break
+    path = str(startingUri)
+##    for visitedUrl in GetVisitedUrls():
+##        path = visitedUrl.Request.DecodedUri
+##        print(path)
+##        break
 
     # Get the issue type object for the given issue type
     issueType = GetIssueType(issueTypeName)
