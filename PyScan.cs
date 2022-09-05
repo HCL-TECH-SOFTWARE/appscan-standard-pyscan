@@ -8,7 +8,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Threading;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using Python.Runtime;
 using AppScan;
 using AppScan.Extensions;
@@ -58,6 +58,7 @@ namespace PyScan
             cDllErrorMessage = TStrings.Instance.GetString("PyScan.dllErrorMessage");
             IMenuItem<EventArgs> menuCommand = new MenuItem<EventArgs>(TStrings.Instance.GetString("PyScan.StartPyScan"), PyScanMain);
             appScanGui.ExtensionsMenu.Add(menuCommand);
+            IappScanGui=appScanGui;
         }
 
         private void PyScanMain(EventArgs args)
@@ -75,7 +76,7 @@ namespace PyScan
                 if (cDllErrorMessage == String.Empty)
                     cDllErrorMessage = TStrings.Instance.GetString("PyScan.dllErrorMessage");
                 Debug.Logger.Log(TraceLevel.Error, e.ToString());
-                MessageBox.Show(cDllErrorMessage, "PyScan extension", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                IappScanGui.ShowMessageBox("PyScan extension", "Error", ExtensionsApiMessageBoxButtons.OK, ExtensionsApiMessageBoxSeverity.Error);
                 return;
             }
 
@@ -191,7 +192,7 @@ namespace PyScan
 
         private IAppScan appScan;
         private string scriptFileName;
-
+        private IAppScanGui IappScanGui;
         #endregion data members
 
         #region consts
