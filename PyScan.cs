@@ -8,7 +8,6 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Threading;
-//using System.Windows.Forms;
 using Python.Runtime;
 using AppScan;
 using AppScan.Extensions;
@@ -111,7 +110,7 @@ namespace PyScan
         void StartPython_NewThread()
         {
             pythonThread = new Thread(new ThreadStart(StartPythonImpl));
-            pythonThread.SetApartmentState(ApartmentState.STA);
+            pythonThread.TrySetApartmentState(ApartmentState.STA);
             pythonThread.IsBackground = true;
             pythonThread.Start();
         }
