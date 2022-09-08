@@ -226,7 +226,6 @@
   -->
   <PropertyGroup>
     <PostBuildEvent>
-rmdir /S /Q "$(TargetDir)\$(TargetName)"
 md "$(TargetDir)\$(TargetName)"
 
 md "$(TargetDir)\$(TargetName)\es-ES"
