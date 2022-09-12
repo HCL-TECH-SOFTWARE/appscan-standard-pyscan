@@ -74,3 +74,8 @@ E) Use AppScan methods
 
 You can call AppScan SDK methods from your Python script. The SDK documentation is located in your AppScan Docs folder, which by default is:
 "C:\Program Files (x86)\HCL\AppScan Standard\Docs\AppScanSDK.chm"
+
+===========================================================
+	
+ F) License
+ All files found in this project are licensed under the Apache License 2.0.
