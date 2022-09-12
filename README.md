@@ -78,4 +78,5 @@ You can call AppScan SDK methods from your Python script. The SDK documentation 
 ===========================================================
 	
  F) License
+ 
  All files found in this project are licensed under the Apache License 2.0.
