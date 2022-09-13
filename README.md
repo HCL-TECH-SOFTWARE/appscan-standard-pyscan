@@ -1,7 +1,5 @@
 Pyscan GitHub repository:
 
-https://github.com/HCL-TECH-SOFTWARE/appscan-standard-pyscan
-
 You can download a ZIP file containing the latest PyScan extension release or compile your own.
 
 Prerequisite:
