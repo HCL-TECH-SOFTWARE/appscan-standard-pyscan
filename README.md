@@ -24,6 +24,7 @@ B) Compile your PyScan extension
 Prerequisites:
 - You must be able to compile a C# Project.
 - You must have 7-zip installed (http://www.7-zip.org/).
+- You must have AppScan Standard version 10.1.0 or later.
 
 
 Skip Step 1 if AppScan Standard is installed in the default folder:
