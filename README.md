@@ -61,11 +61,17 @@ D) Use PyScan in AppScan:
 	- Open your Python file or module, and click Run > Run module.
 	- Write Python code in the console and run it.
 
-Example
+Example 1: PyscanFuzzerUtil.py
 These steps will modify a fuzz word in the demo site requests, which will be printed to the console.
 1) In AppScan, open demo.testfire.net.scant (Starting URL is already configured).
 2) Click Tools > Extension > Start Pyscan.
 3) From the console menu click File > Open, then locate and select “PyscanFuzzerUtil.py”(in the ZIP file you downloaded), then click Run > Run Module.
+
+Example 2: UserDefinedTests_MultiplePayloads.py
+These steps will run your user-defined tests with multiple payloads.
+1) In AppScan, open demo.testfire.net.scant (Starting URL is already configured).
+2) Click Tools > Extension > Start Pyscan.
+3) From the console menu click File > Open, then locate and select “UserDefinedTests_MultiplePayloads.py”(in the ZIP file you downloaded), then click Run > Run Module.
 
 ===========================================================
 	
