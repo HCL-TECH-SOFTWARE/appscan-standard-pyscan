@@ -33,10 +33,10 @@ Skip Step 1 if AppScan Standard is installed in the default folder:
 	b) Locate and right-click on PyScan project.  
 	c) Click Add > Reference  
 	d) In the Browse section, select Browse and add the following 4 DLLs from the AppScan folder:     
-		AppScanSDK.dll  
-  		debug.dll  
-		utilities.dll  
-		AppScanVersionInfo.dll (this file is located in \Tools\Authentication Tester)  
+	- AppScanSDK.dll  
+	- debug.dll  
+	- utilities.dll  
+	- AppScanVersionInfo.dll (this file is located in \Tools\Authentication Tester)  
 
 2) Under project properties you can optionally define the build output location. By default it is the working folder.
 
