@@ -8,7 +8,7 @@ Prerequisite:
 
 ==========================================================
 
-A) Download PyScan extension
+## A) Download PyScan extension
 
 The latest version can be found in the GitHub repository, in the Releases section.
 
@@ -17,7 +17,7 @@ The latest version can be found in the GitHub repository, in the Releases sectio
 
 ==========================================================
 
-B) Compile your PyScan extension
+## B) Compile your PyScan extension
 
 Prerequisites:
 - You must be able to compile a C# Project.
@@ -44,7 +44,7 @@ Skip Step 1 if AppScan Standard is installed in the default folder:
 
 ===========================================================
 
-C) Add the PyScan extension to AppScan:
+## C) Add the PyScan extension to AppScan:
 
 1) In AppScan, go to Tools > Extensions > Extension manager.
 2) Click “Add extension from:” button, and select the “PyScanExt.zip” file you created previously or downloaded.
@@ -52,7 +52,7 @@ C) Add the PyScan extension to AppScan:
 
 ===========================================================
 
-D) Use PyScan in AppScan:
+## D) Use PyScan in AppScan:
 
 1) If your scripts need a Starting URL and this is not configured in the scan on which you are running the script,
    you must configure it in Scan Configuration > URLs and servers.
@@ -75,13 +75,13 @@ These steps will run your user-defined tests with multiple payloads.
 
 ===========================================================
 	
-E) Use AppScan methods
+## E) Use AppScan methods
 
 You can call AppScan SDK methods from your Python script. The SDK documentation is located in your AppScan Docs folder, which by default is:
 "C:\Program Files (x86)\HCL\AppScan Standard\Docs\AppScanSDK.chm"
 
 ===========================================================
 	
- F) License
+## F) License
  
  All files found in this project are licensed under the Apache License 2.0.
