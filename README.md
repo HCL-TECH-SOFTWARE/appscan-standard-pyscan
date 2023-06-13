@@ -1,4 +1,4 @@
-Pyscan GitHub repository:
+AppScan Standard - PyScan extension
 
 You can download a ZIP file containing the latest PyScan extension release or compile your own.
 
