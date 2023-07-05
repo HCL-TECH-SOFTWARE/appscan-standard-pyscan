@@ -16,7 +16,6 @@ using AppScan;
 using AppScan.Extensions;
 using ThreadState = System.Threading.ThreadState;
 using TraceLevel = System.Diagnostics.TraceLevel;
-using AppScan.Diagnostics;
 
 namespace PyScan
 {
@@ -77,7 +76,7 @@ namespace PyScan
             {
                 if (cDllErrorMessage == String.Empty)
                     cDllErrorMessage = TStrings.Instance.GetString("PyScan.dllErrorMessage");
-                Debug.Logger.Log(TraceLevel.Error, e.ToString());
+                Console.WriteLine(e.ToString());
                 IappScanGui.ShowMessageBox("PyScan extension", "Error", ExtensionsApiMessageBoxButtons.OK, ExtensionsApiMessageBoxSeverity.Error);
                 return;
             }
