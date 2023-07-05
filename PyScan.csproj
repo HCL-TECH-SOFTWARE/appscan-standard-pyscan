@@ -69,9 +69,6 @@
     <Reference Include="AppScanSDK">
       <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\AppScanSDK.dll</HintPath>
     </Reference>
-    <Reference Include="AppScanVersionInfo">
-      <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\Tools\Traffic Viewer\AppScanVersionInfo.dll</HintPath>
-    </Reference>
     <Reference Include="Python.Runtime, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Python.Runtime.dll</HintPath>
