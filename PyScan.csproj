@@ -94,10 +94,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppScan.ico" />
-    <Content Include="info.xml">
+    <Content Include="ExtensionSigner.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="PyscanFuzzerUtil.py">
+    <Content Include="info.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\info.Strings.da.xml">
@@ -140,6 +140,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Microsoft.Win32.Registry.dll" />
+    <Content Include="Test 1- PyscanFuzzerUtil.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test 2- UserDefinedTests_MultiplePayloads.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="OpenConsole.py" />
     <Content Include="PyScan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

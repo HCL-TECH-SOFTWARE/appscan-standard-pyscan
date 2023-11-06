@@ -21,7 +21,7 @@ The latest version can be found in the GitHub repository, in the Releases sectio
 
 Prerequisites:
 - You must be able to compile a C# Project.
-- You must have 7-zip installed (http://www.7-zip.org/).
+- You must have 7-zip installed (http://www.7-zip.org/) in the defult location(overwise you'll need to edit the post build even usage of 7zip).
 - You must have AppScan Standard version 10.1.0 or later.
 
 
