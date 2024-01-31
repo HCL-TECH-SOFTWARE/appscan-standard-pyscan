@@ -1,23 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="16.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EC8CE9E1-6616-4AA9-AB63-E3FEC82CD077}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PyScan</RootNamespace>
     <AssemblyName>PyScanExt</AssemblyName>
     <ApplicationIcon>AppScan.ico</ApplicationIcon>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworks>net6.0-windows;net472</TargetFrameworks>
     <UpgradeBackupLocation />
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -33,17 +21,12 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PlatformTarget>x86</PlatformTarget>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
     <OutputPath>output\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <PlatformTarget>x86</PlatformTarget>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -51,9 +34,6 @@
     <Optimize>false</Optimize>
     <OutputPath>output\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
@@ -62,41 +42,26 @@
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AppScanSDK">
-      <HintPath>..\..\Program Files (x86)\HCL\AppScan Standard\AppScanSDK.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HCL\AppScan Standard\AppScanSDK.dll</HintPath>
     </Reference>
-    <Reference Include="Python.Runtime, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\Python.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PyScan.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Strings.Designer.cs">
+    <Compile Update="Resources\Strings.Designer.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Resources\Strings.es-ES.Designer.cs">
+    <Compile Update="Resources\Strings.es-ES.Designer.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Resources\Strings.pt-BR.Designer.cs">
+    <Compile Update="Resources\Strings.pt-BR.Designer.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Strings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppScan.ico" />
-    <Content Include="ExtensionSigner.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="info.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -150,146 +115,57 @@
     <Content Include="PyScan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Resources\Strings.da.resx">
+    <EmbeddedResource Update="Resources\Strings.da.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.de-DE.resx">
+    <EmbeddedResource Update="Resources\Strings.de-DE.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.es-ES.resx">
+    <EmbeddedResource Update="Resources\Strings.es-ES.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.fr-FR.resx">
+    <EmbeddedResource Update="Resources\Strings.fr-FR.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.it-IT.resx">
+    <EmbeddedResource Update="Resources\Strings.it-IT.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.ja-JP.resx">
+    <EmbeddedResource Update="Resources\Strings.ja-JP.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.ko-KR.resx">
+    <EmbeddedResource Update="Resources\Strings.ko-KR.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.pt-BR.resx">
+    <EmbeddedResource Update="Resources\Strings.pt-BR.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.resx">
+    <EmbeddedResource Update="Resources\Strings.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.ru-RU.resx">
+    <EmbeddedResource Update="Resources\Strings.ru-RU.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.zh-CHS.resx">
+    <EmbeddedResource Update="Resources\Strings.zh-CHS.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.zh-CHT.resx">
+    <EmbeddedResource Update="Resources\Strings.zh-CHT.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings.zu-ZA.resx">
+    <EmbeddedResource Update="Resources\Strings.zu-ZA.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <None Include="clr.pyd" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <PropertyGroup>
-    <PostBuildEvent>
-md "$(TargetDir)\$(TargetName)"
-
-md "$(TargetDir)\$(TargetName)\es-ES"
-md "$(TargetDir)\$(TargetName)\pt-BR"
-md "$(TargetDir)\$(TargetName)\it-IT"
-md "$(TargetDir)\$(TargetName)\de-DE"
-md "$(TargetDir)\$(TargetName)\fr-FR"
-md "$(TargetDir)\$(TargetName)\ko-KR"
-md "$(TargetDir)\$(TargetName)\ja-JP"
-md "$(TargetDir)\$(TargetName)\ru-RU"
-md "$(TargetDir)\$(TargetName)\zh-CHT"
-md "$(TargetDir)\$(TargetName)\zh-CHS"
-md "$(TargetDir)\$(TargetName)\da"
-md "$(TargetDir)\$(TargetName)\zu-ZA"
-
-copy "$(TargetDir)\PyscanFuzzerUtil.py" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\PyScan.png" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\PyScanExt.dll" "$(TargetDir)\$(TargetName)\"
-
-copy "$(TargetDir)\Python.Runtime.dll" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\info.xml" "$(TargetDir)\$(TargetName)\"
-
-
-copy "$(TargetDir)\Resources\info.Strings.es-ES.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\es-ES\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\es-ES\"
-
-copy "$(TargetDir)\Resources\info.Strings.pt-BR.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\pt-BR\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\pt-BR\"
-
-copy "$(TargetDir)\Resources\info.Strings.it-IT.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\it-IT\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\it-IT\"
-
-copy "$(TargetDir)\Resources\info.Strings.de-DE.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\de-DE\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\de-DE\"
-
-copy "$(TargetDir)\Resources\info.Strings.fr-FR.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\fr-FR\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\fr-FR\"
-
-copy "$(TargetDir)\Resources\info.Strings.ko-KR.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\ko-KR\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\ko-KR\"
-
-copy "$(TargetDir)\Resources\info.Strings.ja-JP.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\ja-JP\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\ja-JP\"
-
-copy "$(TargetDir)\Resources\info.Strings.ru-RU.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\ru-RU\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\ru-RU\"
-
-copy "$(TargetDir)\Resources\info.Strings.zh-CHT.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\zh-CHT\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zh-CHT\"
-
-copy "$(TargetDir)\Resources\info.Strings.zh-CHS.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\zh-CHS\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zh-CHS\"
-
-copy "$(TargetDir)\Resources\info.Strings.da.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\da\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\da\"
-
-copy "$(TargetDir)\Resources\info.Strings.zu-ZA.xml" "$(TargetDir)\$(TargetName)\"
-copy "$(TargetDir)\da\$(TargetName).resources.dll" "$(TargetDir)\$(TargetName)\zu-ZA\"
-
-$(TargetDir)\ExtensionSigner.exe -s $(TargetDir)\$(TargetName)
-copy "$(TargetDir)\$(TargetName)\info.xml" "$(TargetDir)\"
-del "$(TargetDir)\$(TargetName).zip"
-
- echo "Note: to build this project, you need to have 7-zip installed (http://www.7-zip.org/)"
-"C:\Program Files\7-Zip\7z.exe" a -tzip "$(TargetDir)$(TargetName).zip" -r "$(TargetDir)\$(TargetName)"
-
-
-rem rmdir /S /Q  "C:\Documents and Settings\All Users\Application Data\AppScan Standard\Extensions\$(TargetName)"
-rem md "C:\Documents and Settings\All Users\Application Data\AppScan Standard\Extensions\$(TargetName)"
-rem xcopy "$(TargetDir)\$(TargetName)" "C:\Documents and Settings\All Users\Application Data\AppScan Standard\Extensions\$(TargetName)" /D /S /E /Y</PostBuildEvent>
-  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="StandAlone\PyScanConsole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="pythonnet" Version="3.0.3" />
+  </ItemGroup>
+    <PropertyGroup />
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="md &quot;$(TargetDir)\$(TargetName)\es-ES&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\pt-BR&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\it-IT&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\de-DE&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\fr-FR&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\ko-KR&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\ja-JP&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\ru-RU&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\zh-CHT&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\zh-CHS&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\da&quot;&#xD;&#xA;md &quot;$(TargetDir)\$(TargetName)\zu-ZA&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\PyscanFuzzerUtil.py&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\PyScan.png&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\PyScanExt.dll&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\info.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.es-ES.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\es-ES\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\es-ES\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.pt-BR.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\pt-BR\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\pt-BR\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.it-IT.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\it-IT\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\it-IT\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.de-DE.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\de-DE\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\de-DE\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.fr-FR.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\fr-FR\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\fr-FR\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.ko-KR.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\ko-KR\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\ko-KR\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.ja-JP.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\ja-JP\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\ja-JP\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.ru-RU.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\ru-RU\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\ru-RU\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.zh-CHT.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\zh-CHT\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\zh-CHT\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.zh-CHS.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\zh-CHS\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\zh-CHS\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.da.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\da\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\da\&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)\Resources\info.Strings.zu-ZA.xml&quot; &quot;$(TargetDir)\$(TargetName)\&quot;&#xD;&#xA;copy &quot;$(TargetDir)\da\$(TargetName).resources.dll&quot; &quot;$(TargetDir)\$(TargetName)\zu-ZA\&quot;&#xD;&#xA;&#xD;&#xA;echo copy &quot;$(ProjectDir)\Python.Runtime.dll&quot; &quot;$(TargetDir)PyScanExt&quot;&#xD;&#xA;copy &quot;$(ProjectDir)\Python.Runtime.dll&quot; &quot;$(TargetDir)PyScanExt&quot;&#xD;&#xA;copy &quot;$(TargetDir)\$(TargetName)\info.xml&quot; &quot;$(TargetDir)\&quot;&#xD;&#xA;del &quot;$(TargetDir)\$(TargetName).zip&quot;&#xD;&#xA;&#xD;&#xA;echo &quot;Note: to build this project, you need to have 7-zip installed (http://www.7-zip.org/)&quot;&#xD;&#xA;echo &quot;C:\Program Files\7-Zip\7z.exe&quot; a -tzip &quot;$(TargetDir)$(TargetName).zip&quot; -r &quot;$(TargetDir)\$(TargetName)&quot;&#xD;&#xA;&quot;C:\Program Files\7-Zip\7z.exe&quot; a -tzip &quot;$(TargetDir)$(TargetName).zip&quot; -r &quot;$(TargetDir)\$(TargetName)&quot;" />
+    </Target>
 </Project>

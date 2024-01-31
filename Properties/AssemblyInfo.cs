@@ -1,4 +1,4 @@
-/*#######################################################################################################################
+﻿/*#######################################################################################################################
 # Licensed Materials –Property of HCL Technologies Ltd.
 # © Copyright HCL Technologies Ltd. 2022.
 # All rights reserved. See product license for details. US Government Users Restricted Rights. Use, duplication,
@@ -8,15 +8,6 @@
 #######################################################################################################################*/
 using System.Reflection;
 using System.Runtime.InteropServices;
-
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("PyScan")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
