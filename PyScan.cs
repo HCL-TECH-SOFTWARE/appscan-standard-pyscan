@@ -67,6 +67,7 @@ namespace PyScan
             // init PythonEngine if necessary
             try
             {
+                Runtime.PythonDLL = "python38.dll";
                 if (!PythonEngine.IsInitialized)
                 {
                     PythonEngine.Initialize();
