@@ -13,6 +13,6 @@
    <TargetEdition>
       <!-- supported values: AppScanAuditors, AppScanDev, AppScanQA, AppScanXM, All -->
       <ID>All</ID>
-      <MinCompatibleVersion>7.5</MinCompatibleVersion>
+      <MinCompatibleVersion>10.0</MinCompatibleVersion>
    </TargetEdition>
 </AppScanExtension>
