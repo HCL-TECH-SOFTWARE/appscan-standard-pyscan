@@ -3,7 +3,7 @@
 You can download a ZIP file containing the latest PyScan extension release or compile your own.
 
 Prerequisite:
-- You must have Python version 3.8 installed on the machine that will run the extension, and Python must be added to the Windows path. 
+- You must have Python version 3.8, 32-bit installed on the machine that will run the extension, and Python must be added to the Windows path. 
   To add it: On your machine, in the system Environment Variables > User variables > Path, add a path to your Python installation directory, then restart your machine.
 
 ==========================================================
